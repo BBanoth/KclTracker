@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RuleSet Name="Override Rules" Description="Override Rules for the solution." ToolsVersion="14.0">
+  <Rules AnalyzerId="StyleCop.Analyzers" RuleNamespace="StyleCop.Analyzers">
+    <Rule Id="SA1652" Action="None" />
+	<Rule Id="SA1600" Action="None" />
+	<Rule Id="CS1591" Action="None" />
+	<Rule Id="SA1602" Action="None" />
+	<Rule Id="SA1413" Action="None" />
+	<Rule Id="SA1309" Action="None" />
+  </Rules>
+</RuleSet>

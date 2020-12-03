@@ -1,0 +1,266 @@
+﻿:root {
+    --primary: #f08c20;
+}
+
+@font-face {
+    font-family: "Roboto-Regular";
+    src: url("../fonts/Roboto-Regular.eot"), /* IE9 Compat Modes */
+    url("../fonts/Roboto-Regular.svg") format("svg"), /* Legacy iOS */
+    url("../fonts/Roboto-Regular.ttf") format("truetype"), /* Safari, Android, iOS */
+    url("../fonts/Roboto-Regular.woff") format("woff"), /* Modern Browsers */
+    url("../fonts/Roboto-Regular.woff2") format("woff2"); /* Modern Browsers */
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Roboto-Medium";
+    src: url("../fonts/Roboto-Medium.eot"), /* IE9 Compat Modes */
+    url("../fonts/Roboto-Medium.svg") format("svg"), /* Legacy iOS */
+    url("../fonts/Roboto-Medium.ttf") format("truetype"), /* Safari, Android, iOS */
+    url("../fonts/Roboto-Medium.woff") format("woff"), /* Modern Browsers */
+    url("../fonts/Roboto-Medium.woff2") format("woff2"); /* Modern Browsers */
+    font-weight: normal;
+    font-style: normal;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: "Roboto-Regular";
+    font-size: 13px;
+    padding: 0;
+    margin: 0;
+    background-color: #4a555e;
+}
+
+.btn-primary {
+    background-color: #e78216;
+    border-color: #e78216;
+}
+
+
+.btn-primary {
+    color: #fff;
+    background-color: #e78216;
+    border-color: #e78216;
+  }
+  
+  .btn-primary:hover {
+    color: #fff;
+    background-color: #e78216;
+    border-color: #e78216;
+  }
+  
+  .btn-primary:focus, .btn-primary.focus {
+    box-shadow: 0 0 0 0.2rem rgba(231, 130, 22, 0.5);
+  }
+  
+  .btn-primary.disabled, .btn-primary:disabled {
+    color: #fff;
+    background-color: #e78216;
+    border-color: #e78216;
+  }
+  
+  .btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active,
+  .show > .btn-primary.dropdown-toggle {
+    color: #fff;
+    background-color: #e78216;
+    border-color: #e78216;
+  }
+  
+  .btn-primary:not(:disabled):not(.disabled):active:focus, .btn-primary:not(:disabled):not(.disabled).active:focus,
+  .show > .btn-primary.dropdown-toggle:focus {
+    box-shadow: 0 0 0 0.2rem rgba(231, 130, 22, 0.5);
+  }
+
+  .form-control:focus {
+      border-color: #e78216;
+      box-shadow: 0 0 0 0.2rem rgba(231, 130, 22, 0.25), 
+  }
+
+.main-container {
+    height: 100%;
+}
+
+.login-container {
+    width: 100%;
+    max-width: 920px;
+}
+.form-container {
+    background-color: #FFFFFF;
+    padding: 30px;
+}
+
+.sign-in-title {
+    font-size: 14px;
+    position: relative;
+    font-family: "Roboto-Medium";
+    text-align: center;
+    padding-bottom: 7px;
+    text-transform: uppercase;
+}
+.sign-in-title::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    height: 3px;
+    width: 30px;
+    background-color: #e78216;
+    margin-left: -15px;
+}
+
+.login-container {
+    min-height: 400px
+}
+.form-container {
+    max-width: 370px;
+    min-width: 300px;
+    padding: 50px
+}
+.width-100{
+    width: 100%;
+}
+.form-container .form-group label {
+    margin-bottom: 1px;
+    opacity: .85;
+    font-size: 12px;
+}
+.form-container .sign-button {
+    width: 100%;
+}
+.form-container .form-control,
+.form-container .btn-primary{
+    height: 34px;
+    border-radius: 0;
+}
+.form-container .form-control {
+    font-size: 13px;
+}
+.form-container .btn-primary {
+    font-size: 13px;
+    font-family: "Roboto-Medium";
+}
+.graphic-area {
+    background: url('../images/login-bg-main.jpg') no-repeat top center;
+    background-size: cover;
+    padding: 0;
+}
+
+.forgot-pass-link {
+    color: #e78216;
+    font-size: 12px;
+}
+
+
+.brand-details {
+    padding: 30px;
+}
+.brand-title {
+    color: #FFFFFF;
+    font-size: 20px;
+    margin: 3px 0;
+}
+.brand-details .large-text {
+    font-size: 30px;
+    font-family: "Roboto-Medium";
+}
+.brand-details .divider {
+    width: 1px;
+    height: 23px;
+    background-color: hsla(0,0%,100%,.65);
+    margin: 0 10px;
+}
+.logo img {
+    width: 100%;
+    height: auto;
+    max-width: 160px;
+}
+
+.brand-details .caption {
+    font-size: 14px;
+    color: #FFFFFF;
+    margin: 0;
+}
+
+.input-validation-error {
+    border-color: #dc3545;
+}
+.mat-error {
+    font-size: 11px;
+}
+.input-alert-message {
+    position: relative;
+    display: block;
+}
+.input-alert-message > span {
+    position: absolute;
+    top: 2px;
+}
+
+.validation-summary-errors ul {
+	margin: 0;
+    padding: 0;
+    list-style-type: none;
+    margin-bottom: 10px;
+}
+
+.other-logins-section {
+	margin-top: 20px;
+}
+.other-logins-title {
+    font-size: 12px;
+    position: relative;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.other-logins-title span {
+    display: inline-block;
+    padding: 0 5px;
+    background-color: #FFFFFF;
+    position: relative;
+    z-index: 1;
+    color: #777777;
+}
+.other-logins-title::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    left: 0;
+    top: 9px;
+    background-color: rgba(0,0,0,.16);
+}
+.oth-acc-button {
+	border: 1px solid rgba(0,0,0,.16);
+	padding: 5px 7px;
+	margin:0 10px;
+	border-radius: 3px;
+}
+.oth-acc-button i {
+	padding: 0 10px;
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+    background: url('../images/windows-icon.svg') no-repeat top center;
+}
+.oth-acc-button span {
+	font-size: 12px;
+	padding: 0 5px
+}
+
+
+@media only screen and (max-width: 959px) {
+    .form-container {
+        padding: 30px;
+    }
+}
+
+
+
+
+

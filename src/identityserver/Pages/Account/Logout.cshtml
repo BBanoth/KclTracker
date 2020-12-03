@@ -1,0 +1,19 @@
+﻿@page
+@model KclTracker.IdentityServer.Pages.Account.LogoutModel
+@{
+    ViewData["Title"] = "Log out";
+}
+
+<header>
+    <h1>@ViewData["Title"]</h1>
+    <div class="alert-container-footer">
+        <form id="logout" method="post" asp-route-logoutId="@this.Model.LogoutId">
+            <h4>Do you want to logout ?</h4>
+            <hr />
+            <div class="form-group">
+                <button asp-page-handler="Cancel" class="btn btn-primary no-btn btn-backtologin">No</button>
+                <button type="submit" class="btn btn-default">Yes</button>
+            </div>
+        </form>
+    </div>
+</header>

@@ -1,0 +1,67 @@
+﻿@page
+@model KclTracker.IdentityServer.Pages.Account.LoginModel
+
+@{
+    ViewData["Title"] = "Kcl Tracker";
+    ViewData["SubTitle"] = "Kcl Tracker Services";
+    ViewData["TitleCaption"] = "Track your shipments";
+}
+
+<div class="main-container d-flex align-items-center justify-content-center">
+    <section class="login-container row">
+        <div class="col graphic-area d-flex align-items-end">
+            <div class="brand-details">
+                <div class="logo">
+                    <img src="~/Ims-Identity/images/logo-white.svg" />
+                </div>
+                <h2 class="brand-title d-flex align-items-center row"><span class="large-text">@ViewData["Title"]</span> <span class="divider"></span><span>@ViewData["SubTitle"]</span></h2>
+                <h3 class="caption">@ViewData["TitleCaption"]</h3>
+            </div>
+        </div>
+        <div class="col-5 form-container d-flex align-items-center justify-content-center">
+		<div class="d-block width-100">
+            <form id="account" method="post">
+                <h4 class="sign-in-title">Sign In</h4>
+                @*<div asp-validation-summary="All" class="mat-error text-danger"></div>*@
+                <div class="form-group">
+                    <label asp-for="Input.Email"></label>
+                    <input asp-for="Input.Email" class="form-control" />
+                    <span asp-validation-for="Input.Email" class="mat-error input-alert-message  text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Input.Password"></label>
+                    <input asp-for="Input.Password" class="form-control" />
+                    <span asp-validation-for="Input.Password" class="mat-error input-alert-message text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary sign-button">Sign In</button>
+                </div>
+                <div><a asp-page="./ForgotPassword" class="forgot-pass-link">Forgot Password ?</a></div>
+            </form>
+
+             @if (this.Model.ExternalLogins.Any())
+            {
+                <div class="other-logins-section">
+                    <div class="other-logins-title"><span>Sign in with</span></div>
+                    <div class="panel-body d-flex align-items-center justify-content-center row">
+                        <form id="external-account" asp-page="./ExternalLogin" asp-route-returnUrl="@this.Model.ReturnUrl" method="post" class="form-horizontal">
+                                    @foreach (var provider in this.Model.ExternalLogins) 
+                                    { 
+                                        <button type="submit" class="oth-acc-button d-flex align-items-center justify-content-center row" name="provider" value="@provider.Name" title="Log in using your @provider.DisplayName account">
+											<i></i>
+											 <span>@provider.DisplayName</span>
+										</button>
+                                    } 
+                                    
+                               </form>
+                    </div>
+                </div>
+             } 
+			</div>
+        </div>
+    </section>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

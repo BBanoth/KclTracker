@@ -1,0 +1,31 @@
+﻿@page
+@model KclTracker.IdentityServer.Pages.Account.LoggedOutModel
+@using KclTracker.IdentityServer.Extensions;
+@{
+}
+
+<div class="alert-container">
+    <div class="alert-container-header header-success">
+        <img src="~/images/logout-success-icon.svg" />
+    </div>
+    <div class="alert-container-content">
+        <h4>Sign out</h4>
+        <p>Signed out successfully</p>
+
+        <div class="alert-container-footer">
+
+            @if (this.Model.PostLogoutRedirectUri.IsPresent())
+            {
+                <a class="btn btn-primary btn-backtologin goback-link" href="@this.Model.PostLogoutRedirectUri">Go Back</a>
+            }
+        </div>
+    </div>
+</div>
+
+@section scripts
+    {
+    @if (this.Model.AutomaticRedirectAfterSignOut)
+    {
+        <script src="~/js/signout-redirect.js"></script>
+    }
+}
