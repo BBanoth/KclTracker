@@ -10,5 +10,9 @@ namespace KclTracker.Services.Application.Interfaces
     public interface IApplicationDbContext
     {
         public DbSet<Company> Companies { get; set; }
+
+        public DbSet<UserCompany> UserCompanies { get; set; }
+
+        public DbSet<Shipment> Shipments { get; set; }
     }
 }

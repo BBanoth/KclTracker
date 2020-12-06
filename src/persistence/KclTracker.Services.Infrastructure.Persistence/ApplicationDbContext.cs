@@ -25,6 +25,10 @@ namespace KclTracker.Services.Infrastructure.Persistence
 
         public DbSet<Company> Companies { get; set; }
 
+        public DbSet<UserCompany> UserCompanies { get; set; }
+
+        public DbSet<Shipment> Shipments { get; set; }
+
         public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
         {
             this.OnBeforeSaving();

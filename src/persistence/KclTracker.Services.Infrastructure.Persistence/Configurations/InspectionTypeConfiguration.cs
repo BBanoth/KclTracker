@@ -8,11 +8,11 @@ namespace KclTracker.Services.Infrastructure.Persistence.Configurations
     using Microsoft.EntityFrameworkCore;
     using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-    public class CompanyConfiguration : IEntityTypeConfiguration<Company>
+    public class InspectionTypeConfiguration : IEntityTypeConfiguration<InspectionType>
     {
-        public void Configure(EntityTypeBuilder<Company> builder)
+        public void Configure(EntityTypeBuilder<InspectionType> builder)
         {
-            builder.ToTable("Company", "security");
+            builder.ToTable(nameof(InspectionType));
 
             builder.HasKey(x => x.Id);
         }
