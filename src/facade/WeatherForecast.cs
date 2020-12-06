@@ -2,7 +2,7 @@
 // Copyright (c) Agility E Services. All rights reserved.
 // </copyright>
 
-namespace KclTracker.Services.WebApi
+namespace KclTracker.Services.Facade
 {
     using System;
 

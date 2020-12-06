@@ -19,6 +19,14 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KclTracker.IdentityServer",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KclTracker.Database.Sql", "src\database\sql\KclTracker.Database.Sql.csproj", "{AD0B76DB-B739-474C-8306-4E461BCD79C7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KclTracker.Services.Application", "src\application\KclTracker.Services.Application\KclTracker.Services.Application.csproj", "{B850840E-4FB0-4A0B-AFC0-5977EFD73971}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KclTracker.Services.Infrastructure", "src\infrastructure\KclTracker.Services.Infrastructure\KclTracker.Services.Infrastructure.csproj", "{9808A85F-E6A4-42DC-A325-6D71645F834D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KclTracker.Services.Infrastructure.Persistence", "src\persistence\KclTracker.Services.Infrastructure.Persistence\KclTracker.Services.Infrastructure.Persistence.csproj", "{4CA89C0F-8D06-4208-836B-5975ABFCDE80}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KclTracker.Services.Domain", "src\domain\KclTracker.Services.Domain\KclTracker.Services.Domain.csproj", "{580E24AB-A3AE-4282-96AE-1CBDA257EE48}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -37,6 +45,22 @@ Global
 		{AD0B76DB-B739-474C-8306-4E461BCD79C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AD0B76DB-B739-474C-8306-4E461BCD79C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AD0B76DB-B739-474C-8306-4E461BCD79C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B850840E-4FB0-4A0B-AFC0-5977EFD73971}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B850840E-4FB0-4A0B-AFC0-5977EFD73971}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B850840E-4FB0-4A0B-AFC0-5977EFD73971}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B850840E-4FB0-4A0B-AFC0-5977EFD73971}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9808A85F-E6A4-42DC-A325-6D71645F834D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9808A85F-E6A4-42DC-A325-6D71645F834D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9808A85F-E6A4-42DC-A325-6D71645F834D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9808A85F-E6A4-42DC-A325-6D71645F834D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4CA89C0F-8D06-4208-836B-5975ABFCDE80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4CA89C0F-8D06-4208-836B-5975ABFCDE80}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4CA89C0F-8D06-4208-836B-5975ABFCDE80}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4CA89C0F-8D06-4208-836B-5975ABFCDE80}.Release|Any CPU.Build.0 = Release|Any CPU
+		{580E24AB-A3AE-4282-96AE-1CBDA257EE48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{580E24AB-A3AE-4282-96AE-1CBDA257EE48}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{580E24AB-A3AE-4282-96AE-1CBDA257EE48}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{580E24AB-A3AE-4282-96AE-1CBDA257EE48}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -45,6 +69,10 @@ Global
 		{357B1144-7539-42AF-B68F-FADD35EF702F} = {61D60E32-3653-42E5-AF58-2574C83623A8}
 		{4DAF8CB4-0D4D-4648-BDCA-664EA25524EC} = {61D60E32-3653-42E5-AF58-2574C83623A8}
 		{AD0B76DB-B739-474C-8306-4E461BCD79C7} = {61D60E32-3653-42E5-AF58-2574C83623A8}
+		{B850840E-4FB0-4A0B-AFC0-5977EFD73971} = {61D60E32-3653-42E5-AF58-2574C83623A8}
+		{9808A85F-E6A4-42DC-A325-6D71645F834D} = {61D60E32-3653-42E5-AF58-2574C83623A8}
+		{4CA89C0F-8D06-4208-836B-5975ABFCDE80} = {61D60E32-3653-42E5-AF58-2574C83623A8}
+		{580E24AB-A3AE-4282-96AE-1CBDA257EE48} = {61D60E32-3653-42E5-AF58-2574C83623A8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C7F76E9C-0958-4457-B0E8-8EAD0D623EC1}

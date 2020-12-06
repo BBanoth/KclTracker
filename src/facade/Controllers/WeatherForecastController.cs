@@ -2,7 +2,7 @@
 // Copyright (c) Agility E Services. All rights reserved.
 // </copyright>
 
-namespace KclTracker.Services.WebApi.Controllers
+namespace KclTracker.Services.Facade.Controllers
 {
     using System;
     using System.Collections.Generic;

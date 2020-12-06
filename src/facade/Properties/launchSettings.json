@@ -17,7 +17,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "KclTracker.Services.WebApi": {
+    "KclTracker.Services.Facade": {
       "commandName": "Project",
       "dotnetRunMessages": "true",
       "launchBrowser": true,

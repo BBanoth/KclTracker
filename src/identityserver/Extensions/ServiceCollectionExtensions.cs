@@ -20,7 +20,7 @@ namespace KclTracker.IdentityServer.Extensions
 
     public static class ServiceCollectionExtensions
     {
-        public static IServiceCollection AddIdentityServer(this IServiceCollection services, IConfiguration configuration)
+        public static IServiceCollection AddKclIdentityServer(this IServiceCollection services, IConfiguration configuration)
         {
             if (services == null)
             {

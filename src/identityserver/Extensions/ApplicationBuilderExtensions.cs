@@ -8,7 +8,7 @@ namespace KclTracker.IdentityServer.Extensions
 
     public static class ApplicationBuilderExtensions
     {
-        public static IApplicationBuilder UseIdentity(this IApplicationBuilder app)
+        public static IApplicationBuilder UseKclIdentityServer(this IApplicationBuilder app)
         {
             app.UseIdentityServer();
 
