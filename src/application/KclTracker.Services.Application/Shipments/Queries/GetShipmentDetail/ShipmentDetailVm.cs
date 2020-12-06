@@ -13,6 +13,8 @@ namespace KclTracker.Services.Application.Shipments.Queries.GetShipmentDetail
 
         public string PartName { get; set; }
 
+        public string CompanyName { get; set; }
+
         public DateTime DateOfEntry { get; set; }
 
         public string InspectionType { get; set; }

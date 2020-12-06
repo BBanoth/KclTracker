@@ -24,17 +24,20 @@ namespace KclTracker.Services.Application.Shipments.Queries.GetShipmentDetail
 
         public Task<ShipmentDetailVm> Handle(GetShipmentDetailQuery request, CancellationToken cancellationToken)
         {
-            var companyQuery = from company in this._context.UserCompanies
-                               where company.UserId == this._userService.UserId && company.IsActive && !company.IsDeleted
-                               select company;
+            var companyQuery = from userCompany in this._context.UserCompanies
+                               join company in this._context.Companies
+                               on userCompany.CompanyId equals company.Id
+                               where userCompany.UserId == this._userService.UserId && userCompany.IsActive && !userCompany.IsDeleted
+                               select new { userCompany, company };
 
             var query = from company in companyQuery
                         join shipment in this._context.Shipments.Include(x => x.InspectionType).Include(x => x.History).ThenInclude(x => x.Status)
-                        on company.CompanyId equals shipment.CompanyId
+                        on company.company.Id equals shipment.CompanyId
                         where shipment.DeclarationNumber == request.DeclarationNumber
                         select new ShipmentDetailVm
                         {
                             CdnNumber = shipment.CdnNumber,
+                            CompanyName = company.company.Name,
                             ContainerNumbers = shipment.ContainerNumbers,
                             DateOfEntry = shipment.DateOfEntry,
                             DeclarationNumber = shipment.DeclarationNumber,
